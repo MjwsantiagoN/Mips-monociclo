@@ -1,3 +1,12 @@
+// ============================================================================
+// Grupo: BJLM (Brenno, Joao, Leticia, Marcos)
+// Atividade: Projeto 02 - 2VA (Implementacao de MIPS Monociclo em Verilog)
+// Disciplina: Arquitetura e Organizacao de Computadores
+// Semestre letivo: 2026.2
+// Arquivo: src/memoria/i_mem.v
+// Descricao: Memoria de instrucoes (ROM assincrona, DEPTH palavras) carregada do arquivo texto instruction.list via $readmemb.
+// ============================================================================
+
 // ============================================================
 // i_mem.v - Memoria ROM de instrucoes (leitura assincrona)
 // Projeto 02 - Arquitetura e Organizacao de Computadores
@@ -22,7 +31,12 @@ module i_mem #(
 
     // Carrega o arquivo: primeira linha -> posicao 0,
     // segunda linha -> posicao 1, e assim sucessivamente.
+    // Posicoes nao programadas ficam em 0 (nop: sll $0,$0,0), e nao em X;
+    // assim o PC continua valido se o programa terminar alem da ultima linha.
+    integer i;
     initial begin
+        for (i = 0; i < DEPTH; i = i + 1)
+            mem[i] = 32'h00000000;
         $readmemb(INIT_FILE, mem);
     end
 

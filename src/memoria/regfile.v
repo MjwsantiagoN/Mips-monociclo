@@ -1,3 +1,12 @@
+// ============================================================================
+// Grupo: BJLM (Brenno, Joao, Leticia, Marcos)
+// Atividade: Projeto 02 - 2VA (Implementacao de MIPS Monociclo em Verilog)
+// Disciplina: Arquitetura e Organizacao de Computadores
+// Semestre letivo: 2026.2
+// Arquivo: src/memoria/regfile.v
+// Descricao: Banco de 32 registradores de 32 bits: 2 leituras assincronas, 1 escrita sincrona, $0 fixo em 0 e Reset assincrono.
+// ============================================================================
+
 // regfile.v - Banco de registradores do MIPS (32 x 32 bits)
 //  - Leitura assincrona (2 portas)
 //  - Escrita sincrona na borda de subida de Clock

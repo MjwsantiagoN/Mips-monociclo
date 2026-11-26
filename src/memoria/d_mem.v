@@ -1,3 +1,12 @@
+// ============================================================================
+// Grupo: BJLM (Brenno, Joao, Leticia, Marcos)
+// Atividade: Projeto 02 - 2VA (Implementacao de MIPS Monociclo em Verilog)
+// Disciplina: Arquitetura e Organizacao de Computadores
+// Semestre letivo: 2026.2
+// Arquivo: src/memoria/d_mem.v
+// Descricao: Memoria de dados (RAM): leitura assincrona com MemRead (alta impedancia quando 0) e escrita sincrona com MemWrite.
+// ============================================================================
+
 // ============================================================
 // d_mem.v - Memoria RAM de dados (palavras de 32 bits)
 // Projeto 02 - Arquitetura e Organizacao de Computadores

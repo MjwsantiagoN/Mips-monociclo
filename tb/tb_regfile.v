@@ -1,3 +1,12 @@
+// ============================================================================
+// Grupo: BJLM (Brenno, Joao, Leticia, Marcos)
+// Atividade: Projeto 02 - 2VA (Implementacao de MIPS Monociclo em Verilog)
+// Disciplina: Arquitetura e Organizacao de Computadores
+// Semestre letivo: 2026.2
+// Arquivo: tb/tb_regfile.v
+// Descricao: Testbench do regfile: leituras, escrita sincrona, $0 constante, RegWrite e Reset.
+// ============================================================================
+
 `timescale 1ns/1ps
 module tb_regfile;
     reg Clock=0, Reset=0, RegWrite=0;

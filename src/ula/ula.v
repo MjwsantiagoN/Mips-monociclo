@@ -3,7 +3,7 @@
 // Atividade: Projeto 02 - 2VA (Implementacao de MIPS Monociclo em Verilog)
 // Disciplina: Arquitetura e Organizacao de Computadores
 // Semestre letivo: 2026.2
-// Arquivo: src/ula.v
+// Arquivo: src/ula/ula.v
 // Descricao: Modulo da Unidade Logica e Aritmetica (ULA) combinacional de
 //            32 bits do nucleo MIPS monociclo. Executa operacoes aritmeticas,
 //            logicas, comparacoes com/sem sinal, deslocamentos e LUI conforme

@@ -10,7 +10,7 @@
 //            comportamento seguro para opcodes nao mapeados.
 //
 // Como rodar localmente (Icarus Verilog):
-//   iverilog -Wall -o sim_ctrl.vvp src/ctrl.v tb/tb_ctrl.v
+//   iverilog -Wall -o sim_ctrl.vvp src/ctrl/ctrl.v tb/tb_ctrl.v
 //   vvp sim_ctrl.vvp
 // ============================================================================
 
