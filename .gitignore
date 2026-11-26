@@ -1,0 +1,18 @@
+# Artefatos compilados e ondas de simulacao (Icarus Verilog / GTKWave / ModelSim)
+*.vvp
+*.vcd
+*.lxt
+*.lxt2
+*.fst
+*.ghw
+sim_*
+work/
+transcript
+vsim.wlf
+*.qpf
+*.qsf
+*.bak
+db/
+incremental_db/
+output_files/
+simulation/
