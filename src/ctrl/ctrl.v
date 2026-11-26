@@ -3,11 +3,11 @@
 // Atividade: Projeto 02 - 2VA (Implementacao de MIPS Monociclo em Verilog)
 // Disciplina: Arquitetura e Organizacao de Computadores
 // Semestre letivo: 2026.2
-// Arquivo: src/ctrl.v
+// Arquivo: src/ctrl/ctrl.v
 // Descricao: Unidade de Controle Principal combinacional do MIPS monociclo.
 //            Recebe o campo opcode (bits [31:26] da instrucao de 32 bits) e
 //            gera os sinais de controle do datapath e o codigo ALUOp (4 bits)
-//            alinhado ao contrato de integracao com src/ula_ctrl.v e src/ula.v.
+//            compativel com src/ula/ula_ctrl.v e src/ula/ula.v.
 //
 // Subconjunto ISA coberto (28 instrucoes no total):
 //   - Tipo-R (15): add, sub, and, or, xor, nor, slt, sltu,
@@ -32,7 +32,7 @@ module ctrl (
     output reg        Jal,      // Jump and Link: 1 = grava PC+4 no registrador $ra ($31)
     output reg        SignExt,  // Tipo de extensao do imediato: 1 = com sinal | 0 = com zeros
 
-    // Codigo de 4 bits para ula_ctrl (deve espelhar docs/contrato_ula.md e src/ula_ctrl.v)
+    // Codigo de 4 bits para ula_ctrl (deve espelhar src/ula/ula_ctrl.v)
     output reg  [3:0] ALUOp
 );
 
@@ -56,7 +56,7 @@ module ctrl (
         OP_SW    = 6'b101011; // 0x2B - sw    (grava palavra de rt na memoria)
 
     // ------------------------------------------------------------------------
-    // Codigos ALUOp de 4 bits (identicos aos definidos em src/ula_ctrl.v)
+    // Codigos ALUOp de 4 bits (identicos aos definidos em src/ula/ula_ctrl.v)
     // ------------------------------------------------------------------------
     localparam [3:0]
         ALUOP_ADD   = 4'b0000, // lw, sw, addi

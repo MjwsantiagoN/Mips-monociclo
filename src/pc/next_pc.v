@@ -14,7 +14,7 @@
 //
 //            Prioridade: jr > j/jal > desvio condicional > PC+4.
 //
-// Decisao de desvio (conforme docs/contrato_ula.md; a ULA faz rs - rt):
+// Decisao de desvio (a ULA faz rs - rt):
 //   beq desvia quando (BranchEq &  Zero_flag)
 //   bne desvia quando (BranchNE & ~Zero_flag)
 //

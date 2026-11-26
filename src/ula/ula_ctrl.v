@@ -3,7 +3,7 @@
 // Atividade: Projeto 02 - 2VA (Implementacao de MIPS Monociclo em Verilog)
 // Disciplina: Arquitetura e Organizacao de Computadores
 // Semestre letivo: 2026.2
-// Arquivo: src/ula_ctrl.v
+// Arquivo: src/ula/ula_ctrl.v
 // Descricao: Unidade de Controle da ULA (decodificacao em dois niveis).
 //            Recebe ALUOp (4 bits) da unidade de controle principal (ctrl) e
 //            o campo funct (6 bits) da instrucao para gerar o sinal OP (4 bits)

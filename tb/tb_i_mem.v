@@ -1,3 +1,12 @@
+// ============================================================================
+// Grupo: BJLM (Brenno, Joao, Leticia, Marcos)
+// Atividade: Projeto 02 - 2VA (Implementacao de MIPS Monociclo em Verilog)
+// Disciplina: Arquitetura e Organizacao de Computadores
+// Semestre letivo: 2026.2
+// Arquivo: tb/tb_i_mem.v
+// Descricao: Testbench da i_mem: leitura de instrucoes, DEPTH parametrizavel, arquivos diferentes e enderecos invalidos.
+// ============================================================================
+
 `timescale 1ns/1ps
 
 module tb_i_mem;
@@ -5,11 +14,11 @@ module tb_i_mem;
     wire [31:0] out_default, out_16, out_file2;
     integer errors = 0;
 
-    // Os arquivos instruction.list e instruction2.list devem estar
-    // no diretorio de execucao do simulador.
-    i_mem #(.DEPTH(256), .INIT_FILE("instruction.list"))  u0(address, out_default);
-    i_mem #(.DEPTH(16),  .INIT_FILE("instruction.list"))  u1(address, out_16);
-    i_mem #(.DEPTH(16),  .INIT_FILE("instruction2.list")) u2(address, out_file2);
+    // Os arquivos de tb/dados/ sao lidos a partir da raiz do projeto, entao rode o simulador no
+    // diretorio raiz do projeto.
+    i_mem #(.DEPTH(256), .INIT_FILE("tb/dados/instruction.list"))  u0(address, out_default);
+    i_mem #(.DEPTH(16),  .INIT_FILE("tb/dados/instruction.list"))  u1(address, out_16);
+    i_mem #(.DEPTH(16),  .INIT_FILE("tb/dados/instruction2.list")) u2(address, out_file2);
 
     task chk(input [31:0] got, input [31:0] expected, input [511:0] name);
     begin

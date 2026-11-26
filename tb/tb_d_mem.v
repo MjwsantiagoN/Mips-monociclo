@@ -1,3 +1,12 @@
+// ============================================================================
+// Grupo: BJLM (Brenno, Joao, Leticia, Marcos)
+// Atividade: Projeto 02 - 2VA (Implementacao de MIPS Monociclo em Verilog)
+// Disciplina: Arquitetura e Organizacao de Computadores
+// Semestre letivo: 2026.2
+// Arquivo: tb/tb_d_mem.v
+// Descricao: Testbench da d_mem: leitura/escrita, MemRead em Z, escrita sincrona, DEPTH parametrizavel e enderecos invalidos.
+// ============================================================================
+
 `timescale 1ns/1ps
 
 module tb_d_mem;
@@ -77,8 +86,10 @@ module tb_d_mem;
         chk(ReadData, 32'h77777777, "depois da borda de escrita");
 
         // DEPTH=16: ultima palavra fica no endereco 15*4 = 60.
+        // (Address = 1024 evita que a instancia principal grave junto, pois
+        //  MemWrite e WriteData sao compartilhados entre as duas instancias)
         @(negedge Clock);
-        MemWrite = 0; a16 = 60; MemWrite = 1;
+        MemWrite = 0; Address = 1024; a16 = 60; MemWrite = 1;
         WriteData = 32'hFEEDC0DE;
         @(posedge Clock); #1;
         MemWrite = 0; MemRead = 1; #1;
